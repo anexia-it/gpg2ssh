@@ -22,7 +22,6 @@ func main() {
 	}
 	defer sourceFile.Close()
 
-
 	fmt.Fprintln(os.Stderr, ">>> decoding OpenPGP keyring")
 	entityList, err := openpgp.ReadArmoredKeyRing(sourceFile)
 	if err != nil {
